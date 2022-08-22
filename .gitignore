@@ -1,0 +1,5 @@
+DevServer/db.sqlite3
+DevServer/DevServer/settings.py
+.idea
+.idea/*
+.python-version
