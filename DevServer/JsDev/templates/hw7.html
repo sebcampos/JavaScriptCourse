@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/coming-soon.css' %}">
+    <title>Homework Page 7</title>
+</head>
+<body class="background">
+    <div class="container-fluid  p-0">
+      <nav class="navbar navbar-dark" style="background-color: black;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+            <img src="{% static 'media/Girdog.png' %}" alt="" width="100" height="100" class="d-inline-block align-text-mid">
+                Home
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">
+                   <img src="{% static 'media/Girdog.png' %}" alt="" class="d-inline-block align-text-mid nav-image">
+                   Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/hw2">
+                   <img src="{% static 'media/gir2.png' %}" alt="" class="d-inline-block align-text-mid nav-image">
+                   Homework Page 2
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/hw3">
+                   <img src="{% static 'media/gir3.png' %}" alt="" width="50" height="50" class="d-inline-block align-text-mid nav-image">
+                   Homework Page 3
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/hw4">
+                   <img src="{% static 'media/gir4.jpeg' %}" alt="" class="d-inline-block align-text-mid nav-image">
+                   Homework Page 4
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/hw5">
+                   <img src="{% static 'media/gir5.jpeg' %}" alt="" class="d-inline-block align-text-mid nav-image">
+                   Homework Page 5
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/hw6">
+                   <img src="{% static 'media/gir6.jpeg' %}" alt="" class="d-inline-block align-text-mid nav-image">
+                   Homework Page 6
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/hw7">
+                   <img src="{% static 'media/gir7.jpeg' %}" alt="" class="d-inline-block align-text-mid nav-image">
+                   Homework Page 7
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/hw8">
+                   <img src="{% static 'media/gir8.png' %}" alt="" class="d-inline-block align-text-mid nav-image">
+                   Homework Page 8
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+    </div>
+    <div class="container-fluid d-flex justify-content-center">
+        <h1>This Page is Coming Soon To A Url Near You!</h1>
+    </div>
+    <div class="container-fluid d-flex justify-content-center gir">
+        <img id='loading-gir' src="{% static 'media/under-construction.gif' %}">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    {% load static %}
+    <script src="{% static 'js/hw1.js' %}"></script>
+</body>
+</html>
