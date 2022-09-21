@@ -1,6 +1,11 @@
-#parts1and2 {
-  top: 100%;
-  width:100%;
+#form-container {
+    display: none;
+}
+
+.background {
+    background-image: url("../media/hw_p1.jpeg");
+    /*background-repeat: no-repeat;*/
+    background-size:100% 100%;
 }
 
 .nav-image {
@@ -9,8 +14,17 @@
     height: 50px;
 }
 
-h1 {
-	color: white;
+.invis {
+    display: none;
+    font-size: 50px;
+}
+
+.invis2 {
+   display: none;
+}
+
+h1, h2, p, form {
+	color: white;	
 }
 
 html {
@@ -21,17 +35,14 @@ html {
     overflow: hidden;
 }
 
-p {
-	color: white;
-	font-size: 20px;
+#extra-credit-table {
+	background-color: white;
+
 }
 
 body {
     height: 100%;
     width: 100%;
-    background-image: url("../media/space.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
     margin: 0;
     padding: 0;
     overflow-y: scroll;

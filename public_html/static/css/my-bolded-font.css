@@ -1,0 +1,5 @@
+h1, p {
+ color: red;
+ -webkit-text-stroke: 1px red;
+ font-family: arial; color: green;
+}

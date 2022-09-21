@@ -9,11 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../static/css/hw2_p1.css">
-    <title>Homework Page 2 Part 1</title>
+    <link rel="stylesheet" href="../static/css/my-bolded-font.css">
+    <title>Homework Page 3 Part 1</title>
 </head>
 <body class="background">
-    <div class="container-fluid  p-0">
-      <nav class="navbar navbar-dark" style="background-color: black;">
+    <div class="container-fluid  p-0 pb-5">
+      <nav class="navbar navbar-dark fixed-top" style="background-color: black;">
           <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
             <img src= '../static/media/Girdog.png'  alt="" width="100" height="100" class="d-inline-block align-text-mid">
@@ -31,13 +32,13 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="../hw2.html">
+                  <a class="nav-link" href="../hw2.html">
                    <img src= '../static/media/gir2.png'  alt="" class="d-inline-block align-text-mid nav-image">
                    Homework Page 2
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../hw3.html">
+                  <a class="nav-link active" href="../hw3.html">
                    <img src= '../static/media/gir3.png'  alt="" width="50" height="50" class="d-inline-block align-text-mid nav-image">
                    Homework Page 3
                   </a>
@@ -78,23 +79,59 @@
       </nav>
     </div>
     <br>
+    <div class="d-grid gap-4 background mt-5 pt-5">
     <div class="container-fluid d-flex justify-content-center">
-        <h1>Part 1</h1>
+        <h1>Student Grades</h1>
     </div>
-    <div class="h-50 d-flex align-items-center justify-content-center">
-        <span id="xy" class="invis" style="font-family: 'times new roman', times, serif; color: #e20707;">xy</span>
-        &nbsp; &nbsp; &nbsp;
-        <span id="12_blue" class="invis" style="font-family: arial, helvetica, sans-serif; color: #3366ff;"> 12</span>
-        &nbsp; &nbsp; &nbsp;
-        <span id="89_green" class="invis" style="color: #008000; font-family: impact;"><em> 89</em></span>
+    <div class="d-flex align-items-center justify-content-center">
+        <form id="form-container">
+          <div class="mb-3">
+            <label for="hwavg" class="form-label">Homework Average</label>
+            <input class="form-control" id="hwavg" onKeyUp="validateInputBox(this, validateInputRange)">
+            <div id="validation1" class="invalid-feedback">
+                Please enter a valid numerical value between 1-100.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="midterm" class="form-label">MidTerm Score</label>
+            <input class="form-control" id="midterm" onKeyUp="validateInputBox(this, validateInputRange)">
+            <div id="validation2" class="invalid-feedback">
+                Please enter a valid numerical value between 0-100.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="finalexam" class="form-label">Final Exam Score</label>
+            <input class="form-control" id="finalexam" onKeyUp="validateInputBox(this, validateInputRange)">
+            <div id="validation3" class="invalid-feedback">
+                Please enter a valid numerical value between 0-100.
+            </div>
+	  </div>
+          <div class="mb-3">
+            <label for="participation" class="form-label">Participation</label>
+            <input class="form-control" id="participation" onKeyUp="validateInputBox(this, validateInputRange)">
+            <div id="validation4" class="invalid-feedback">
+                Please enter a valid numerical value between 0-100.
+            </div>
+	  </div>
+          <button type="button" onclick="submitFormHw3P1()" class="btn btn-outline-warning">Submit</button>
+          <button type="button" onclick="resetFormAndResults(resultDefaultPrompt)" class="btn btn-outline-warning">Reset</button>
+        </form>
     </div>
     <div class="container-fluid d-flex justify-content-center">
-       <a href="../hw2.html" class="w-50 btn btn-outline-warning" role="button">Return To Page 2</a>
+        <h2>Results:</h2>
+    </div>
+    <div class="container-fluid d-flex justify-content-center">
+        <textarea disabled style="background: white" rows="5" id="result">Enter the students Homwork average, midterm score, final exam score, and participation score to view the final grade in this text area!</textarea>
+    </div>
+    <div class="container-fluid d-flex justify-content-center">
+       <a href="../hw3.html" class="w-50 btn btn-outline-warning" role="button">Return To Page 3</a>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-    <script src= '../static/js/hw2_p1.js' ></script>
+    <script src= '../static/js/form_utils.js' ></script>
+    <script src="../static/js/hw3_p1.js"></script>
 </body>
 </html>
