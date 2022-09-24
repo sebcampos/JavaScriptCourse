@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../static/css/hw2_p1.css">
+    <link rel="stylesheet" href="../static/css/my-bolded-font.css">
     <title>Homework 3 Part 2</title>
 </head>
 <body class="background">
@@ -86,85 +87,85 @@
         <form id="form-container">
           <div class="mb-3">
             <label for="seller-name" class="form-label">Sellers's Name</label>
-            <input class="form-control" id="seller-name" onKeyUp="validateInputBox(this)">
+            <input class="form-control" id="seller-name" onKeyUp="validateInputStringSize(this)">
             <div id="validation1" class="invalid-feedback">
-                Please enter a valid numerical value.
+                Please enter at least 3 characters.
             </div>
           </div>
           <div class="mb-3">
             <label for="item1-input" class="form-label">Item 1</label>
-            <input class="form-control" id="item1-input" onKeyUp="validateInputBox(this)">
+            <input class="form-control" id="item1-input" onKeyUp="validateInputBox(this, isNonNegative)">
             <div id="validation2" class="invalid-feedback">
                 Please enter a valid numerical value.
             </div>
           </div>
           <div class="mb-3">
             <label for="item2-input" class="form-label">Item 2</label>
-            <input class="form-control" id="item2-input" onKeyUp="validateInputBox(this)">
+            <input class="form-control" id="item2-input" onKeyUp="validateInputBox(this, isNonNegative)">
             <div id="validation3" class="invalid-feedback">
                 Please enter a valid numerical value.
             </div>
           </div>
           <div class="mb-3">
             <label for="item3-input" class="form-label">Item 3</label>
-            <input class="form-control" id="item3-input" onKeyUp="validateInputBox(this)">
+            <input class="form-control" id="item3-input" onKeyUp="validateInputBox(this, isNonNegative)">
             <div id="validation3" class="invalid-feedback">
                 Please enter a valid numerical value.
             </div>
           </div>
           <div class="mb-3">
             <label for="item4-input" class="form-label">Item 4</label>
-            <input class="form-control" id="item4-input" onKeyUp="validateInputBox(this)">
+            <input class="form-control" id="item4-input" onKeyUp="validateInputBox(this, isNonNegative)">
             <div id="validation3" class="invalid-feedback">
                 Please enter a valid numerical value.
             </div>
           </div>
-          <button type="button" onclick="submitForm()" class="btn btn-outline-warning">Submit</button>
-          <button type="button" onclick="resetFormAndResults()" class="btn btn-outline-warning">Reset</button>
+          <button type="button" onclick="submitFormHw3P2()" class="btn btn-outline-warning">Submit</button>
+          <button type="button" onclick="resetForm();resetTable()" class="btn btn-outline-warning">Reset</button>
         </form>
     </div>
 	<div class="px-5 container-fluid d-flex justify-content-center">
 		<table class="invis2 table" id="extra-credit-table">
   			<thead>
     			<tr>
-      				<th scope="col">Item#</th>
-      				<th scope="col">Price</th>
-      				<th scope="col">Qty Sold</th>
-				<th scope="col">Total $</th>
+				<th scope="col"><div class='text-end'>Item#</div></th>
+      				<th scope="col"><div class='text-end'>Price</div</th>
+				<th scope="col"><div class='text-end'>Qty Sold</div></th>
+				<th scope="col"><div class='text-end'>Total $</div></th>
     			</tr>
   			</thead>
   			<tbody>
     			<tr id="item-1">
-      				<td class="item-num">1</td>
-      				<td class="item-price">$20.99</td>
-      				<td class="item-qt-sold"></td>
-				<td class="item-total"></td>
+				<td class="item-num"><div class='text-end'>1</div></td>
+				<td class="item-price"><div class='text-end'>$20.99</div></td>
+				<td class="item-qt-sold"><div class='text-end'><input class='text-end'></input></div></td>
+				<td class="item-total"><div class='text-end'><input class='text-end'></input></div></td>
     			</tr>
 			<tr id="item-2">
-                                <td class="item-num">2</td>
-                                <td class="item-price">$12.75</td>
-                                <td class="item-qt-sold"></td>
-                                <td class="item-total"></td>
+				<td class="item-num"><div class='text-end'>2</div></td>
+				<td class="item-price"><div class='text-end'>$12.75</div></td>
+				<td class="item-qt-sold"><div class='text-end'><input class='text-end'></input></div></td>
+				<td class="item-total"><div class='text-end'><input class='text-end'></input></div></td>
                         </tr>
                         <tr id="item-3">
-                                <td class="item-num">3</td>
-                                <td class="item-price">$9.95</td>
-                                <td class="item-qt-sold"></td>
-                                <td class="item-total"></td>
+				<td class="item-num"><div class='text-end'>3</div></td>
+				<td class="item-price"><div class='text-end'>$9.95</div></td>
+				<td class="item-qt-sold"><div class='text-end'><input class='text-end'></input></div></td>
+				<td class="item-total"><div class='text-end'><input class='text-end'></input></div></td>
                         </tr>
                         <tr id="item-4">
-                                <td class="item-num">4</td>
-                                <td class="item-price">$35.89</td>
-                                <td class="item-qt-sold"></td>
-                                <td class="item-total"></td>
+				<td class="item-num"><div class='text-end'>4</div></td>
+				<td class="item-price"><div class='text-end'>$35.89</div></td>
+				<td class="item-qt-sold"><div class='text-end'><input class='text-end'></input></div></td>
+                                <td class="item-total"><div class='text-end'><input class='text-end'></input></div</td>
                         </tr>
 			<tr>
-				<td colspan="3"><strong>Total Amount Sold</strong></td>
-				<td id="total-amount-sold"></td>
+				<td colspan="3"><div class='text-end'><strong>Total Amount Sold</strong></div></td>
+				<td id="total-amount-sold"><div class='text-end'><input class='text-end'></input></div></td>
 			</tr>
 			<tr>
-				<td colspan="3"><strong>Total Weekly Earnings</strong></td>
-				<td id="total-weekly-earnings"></td>
+				<td colspan="3"><div class='text-end'><strong>Total Weekly Earnings</strong></div></td>
+				<td id="total-weekly-earnings"><div class='text-end'><input class='text-end'></input></div></td>
 			</tr>
  			</tbody>
 		</table>	
@@ -177,7 +178,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-	<script src= '../static/js/hw2_p1.js' ></script>
+    <script src= '../static/js/hw2_p1.js' ></script>
     <script src= '../static/js/form_utils.js' ></script>
     <script src= '../static/js/hw3_p2.js'></script>
 </body>

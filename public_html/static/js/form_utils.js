@@ -90,19 +90,27 @@ function resetFormAndResults(resultVal = false)
 		resultVal = "Enter 3 numbers in the fields above to have their sum, average, product, min and max displayed here!";	
 	}
 	// reset values in form
-	for (let i = 0; i < document.forms["form-container"].elements.length; i++)
-	{
-		var formItem = document.forms["form-container"].elements[i];
-		if (formItem.tagName === "INPUT")
-		{
-			formItem.value = "";
-		}
-	}
-
+	resetForm();
 	// reset results text
 	document.getElementById("result").value = resultVal;
 	
 }
+
+
+function resetForm()
+{
+	// reset values in form
+        for (let i = 0; i < document.forms["form-container"].elements.length; i++)
+        {
+                var formItem = document.forms["form-container"].elements[i];
+                if (formItem.tagName === "INPUT")
+                {
+                        formItem.value = "";
+                }
+        }
+}
+
+
 
 /**
  * This method takes 3 numbers as arguments
@@ -155,6 +163,7 @@ function convertNumber(userInput)
 */
 function validateInputBox(btn, secondValidation = false)
 {
+	
     // validate the text is not empty
     var textVal = btn.value;
     if (textVal.length < 1)
@@ -216,6 +225,15 @@ function setValidState(btn, isValid)
     	return;
 }
 
+function findElementByXPath(xpath) 
+{
+	return document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+}
+
+function findElementsByXPath(xpath) 
+{
+	return document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+}
 
 document.addEventListener("DOMContentLoaded", function()
 {

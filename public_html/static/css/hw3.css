@@ -26,3 +26,15 @@ p {
 	font-size: 20px;
 }
 
+body {
+    height: 100%;
+    width: 100%;
+    /*background-image: url("../media/space.gif");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box;
+}
