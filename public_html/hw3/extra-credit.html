@@ -85,22 +85,31 @@
     </div>
     <div class="d-flex align-items-center justify-content-center">
         <form id="form-container">
-          <div class="mb-3">
-            <label for="userInput" class="form-label">What is X * Y?</label>
-            <input class="form-control" id="userInput" onKeyUp="validateInputBox(this)">
+	  <div class="mb-3 hideUs">
+		  <p id="x_and_y_text_area">If X is equal to X_PLACEHOLDER and Y is equal to Y_PLACEHOLDER, <br> 
+		  What is the product of X and Y?<p>
+	  </div>
+          <div class="mb-3 hideUs">
+            <label for="userInput" class="form-label">Enter you answer here</label>
+            <input class="form-control" id="userInput" onKeyUp="validateInputBox(this, notDecimial)">
             <div id="validation1" class="invalid-feedback">
-                Please enter a valid numerical value.
+                Please enter a valid numerical value (No Decimals).
             </div>
           </div>
-          <button type="button" onclick="toCelsius()" class="btn btn-outline-warning">Submit</button>
-          <button type="button" onclick="resetFormAndResults(resultDefaultPrompt)" class="btn btn-outline-warning">Reset</button>
+          <button type="button" onclick="submitFormPart3ExtraCredit()" class="btn btn-outline-warning hideUs">Submit</button>
+          <button type="button" onclick="resetFormAndResults(defaultResults)" class="btn btn-outline-warning hideUs">Reset</button>
+	  <div class="mb-3 invis2">
+		<h2>Thanks for playing!<br>Play again?</h2>
+	  </div>
+	  <button type="button" onclick="location.reload()" class="btn btn-outline-warning invis2">YES</button>
+          <button type="button" onclick="thanksForPlayingMessage()" class="btn btn-outline-warning invis2">NO</button>
         </form>
     </div>
     <div class="container-fluid d-flex justify-content-center">
         <h2>Results:</h2>
     </div>
     <div class="container-fluid d-flex justify-content-center">
-        <textarea disabled style="background: white" rows="5" id="result">Enter a Value to convert to either Celsius or Farenheit</textarea>
+        <textarea disabled style="background: white" rows="5" id="result"></textarea>
     </div>
     <div class="container-fluid d-flex justify-content-center">
        <a href="../hw3.html" class="w-50 btn btn-outline-warning" role="button">Return To Page 3</a>
@@ -111,6 +120,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
     <script src= '../static/js/form_utils.js' ></script>
-    <script src="../static/js/hw3_p3.js"></script>
+    <script src="../static/js/hw3_extra-credit.js"></script>
 </body>
 </html>
